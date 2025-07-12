@@ -1,0 +1,76 @@
+.遮罩層 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.7);
+  z-index: 99;
+  display: none;
+}
+
+.彈窗區塊 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 450px;
+  max-height: 80%;
+  background: #1B1F28;
+  border-radius: 12px 12px 0 0;
+  color: #eee;
+  z-index: 100;
+  display: none;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+}
+
+.彈窗表頭 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 16px;
+  border-bottom: 1px solid #53585D;
+  position: relative;
+}
+
+.彈窗列 {
+  display: flex;
+}
+
+.彈窗列 .標籤 {
+  color: #9CA0A9;
+  margin-right: 4px;
+}
+
+.幣種顯示區塊 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.幣種圖示 {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.幣種標籤 {
+  font-size: 14px;
+  color: #eee;
+  font-weight: bold;
+}
+
+.交易總計 {
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #53585D;
+  width: 80%;
+  margin: 0 auto;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>提領紀錄</title>
+    <!-- 載入 Anuphan 字體 -->
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500&display=swap" rel="stylesheet" />
+    <!-- 引入外部 CSS（已中文化） -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+    <div class="應用容器">
+        <!-- 歷史表頭 -->
+        <div class="歷史表頭">
+            <span>歷史記錄</span>
+            <span class="關閉按鈕">&times;</span>
+        </div>
+
+        <!-- 選項卡區塊 -->
+        <div class="選項卡區塊">
+            <div class="選項卡">加值</div>
+            <div class="選項卡 啟用">提領</div>
+            <div class="選項卡">現貨交易</div>
+            <div class="選項卡">一鍵買賣</div>
+            <div class="選項卡">定期定額</div>
+        </div>
+
+        <!-- 主內容區 -->
+        <div class="內容容器">
+            <div class="內容卡片">
+                <!-- 提示框 -->
+                <div class="提示框">
+                    <div class="提示框左側">
+                        <span class="感嘆號圖示">!</span>
+                        <span class="提示文字">提領新台幣、加密貨幣，何時到帳？</span>
+                    </div>
+                    <span class="下拉箭頭圖示"></span>
+                </div>
+
+                <!-- 標題列 -->
+                <div class="標題列">
+                    <span>近 100 筆紀錄</span>
+                    <span class="篩選圖示">
+                        <svg viewBox="0 0 16 16">
+                            <path d="M2 3h12v2H2V3z M4 7h8v2H4V7z M6 11h4v2H6V11z" />
+                        </svg>
+                    </span>
+                </div>
+
+                <!-- 篩選區塊 -->
+                <div class="篩選區塊">
+                    <div class="篩選表頭">幣種</div>
+                    <div class="篩選內容">數量 / 狀態</div>
+                </div>
+
+                <!-- 紀錄清單 -->
+                <div id="紀錄清單"></div>
+
+                <!-- 彈窗區塊 -->
+                <div class="遮罩層" id="遮罩背景"></div>
+                <div class="彈窗區塊" id="提領彈窗">
+                    <div class="彈窗表頭">
+                        <span>提領明細</span>
+                        <span class="關閉按鈕" id="關閉彈窗">&times;</span>
+                    </div>
+                    <div class="彈窗列" id="彈窗明細"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 調用 JS -->
+    <script src="script.js"></script>
+    <script src="popup.js"></script>
+</body>
+
+</html>
