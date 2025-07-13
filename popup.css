@@ -37,7 +37,9 @@
 }
 
 .彈窗列 {
-  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
 }
 
 .彈窗列 .標籤 {
@@ -70,7 +72,76 @@
 .交易總計 {
   font-size: 14px;
   text-align: center;
-  border: 1px solid #53585D;
-  width: 80%;
-  margin: 0 auto;
+  background-color: #252935;
+  padding: 35px;
+  border-radius: 4px;
+  height: 60px;
+  width: 85%;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column; /* 垂直排列 */
+  justify-content: center;
+  align-items: center;    /* 水平居中 */
+  gap: 8px;               /* 行距 */
+}
+
+.總計 {
+  color: #A1A4B0;
+  font-size: 16px;
+  display: block;         /* 一行一個 */
+  text-align: center;
+}
+.金額 {
+  font-weight: 550;
+  color: white;
+  font-size: 28px;
+  display: block;
+  text-align: center;
+  padding-left: 12px;
+  white-space: nowrap;   /* 不換行 */
+}
+
+.下拉箭頭圖示2 {
+  width: 7px;
+  height: 7px;
+  border: solid #3b6ed6;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  vertical-align: middle;
+  border-radius: 2px;
+  margin-left: 10px;
+  margin-top: -2px;
+}
+.狀態等待處理 {
+  color: #9DA1AC;
+  margin-left: 3px;
+  gap: 6px;
+  font-size: 15px;
+  position: relative;
+}
+.狀態完成 {
+  color: #9DA1AC;
+  margin-left: 3px;
+  gap: 6px;
+  font-size: 15px;
+  position: relative;
+  padding-left: 14px; /* 給圓點預留空間 */
+}
+.狀態完成::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #01B1BA;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0; /* 靠左對齊父元素 */
+  top: 50%;
+  transform: translateY(-50%);
+}
+.說明{
+  color:#3b6ed6; 
+  font-size:15px; 
+  vertical-align:middle; 
+  margin-left: 5px;
 }
