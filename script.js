@@ -50,20 +50,39 @@ function 建立紀錄(幣種, 時間, 金額, 狀態類型, 狀態文字, 索引
          data-amount="${金額}"
          data-time="${時間}"
          data-status="${狀態文字}"
-         data-index="${狀態類型 === "處理中" ? 0 : 1}"
-         onclick="顯示彈窗(this)">
+         data-index="${狀態類型 === "處理中" ? 0 : 1}">
       <img src="${幣種}.png" class="幣種圖示" />
       <div class="紀錄文字區塊">
         <div class="幣種文字">${幣種}</div>
         <div class="時間文字">${時間}</div>
       </div>
       <div class="右側資訊">
-        <div class="金額文字">${金額}</div>
-        <div class="狀態 ${狀態類型}">${狀態文字}</div>
+        <div class="金額文字 可編輯">${金額}</div>
+        <div class="狀態 可彈窗 ${狀態類型}">${狀態文字}</div>
       </div>
     </div>
   `;
   紀錄清單容器.appendChild(項目);
+
+  // 綁定左側金額點擊事件（修改金額）
+  項目.querySelector('.右側資訊').onclick = function (e) {
+    e.stopPropagation();
+    // 只選擇金額文字進行修改
+    const 金額元素 = this.querySelector('.金額文字');
+    let currentAmount = 金額元素.textContent;
+    let newAmount = prompt('請輸入新金額：', currentAmount);
+    if (newAmount !== null && newAmount.trim() !== '') {
+      金額元素.textContent = newAmount;
+    }
+  };
+  // 綁定右側狀態點擊事件（彈出明細）
+  項目.querySelector('.紀錄文字區塊').onclick = function (e) {
+    e.stopPropagation();
+    document.getElementById('遮罩背景').style.display = 'block';
+    document.getElementById('提領彈窗').style.display = 'block';
+    document.getElementById('彈窗明細').textContent =
+      `幣種：${幣種}\n金額：${項目.querySelector('.金額文字').textContent}\n時間：${時間}\n狀態：${狀態文字}`;
+  };
 }
 
 // ⌛ 初始化第一筆資料
@@ -94,5 +113,11 @@ for (let i = 1; i < 總筆數; i++) {
   建立紀錄(幣種, 格式化時間(現在時間), 金額, "已完成", "完成", i);
   上一幣種 = 幣種;
 }
+
+// 關閉彈窗
+document.getElementById('關閉彈窗').onclick = function () {
+  document.getElementById('遮罩背景').style.display = 'none';
+  document.getElementById('提領彈窗').style.display = 'none';
+};
 
 
