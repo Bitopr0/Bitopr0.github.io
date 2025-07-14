@@ -14,7 +14,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 450px;
+  height: 520px;
   max-height: 80%;
   background: #1B1F28;
   border-radius: 12px 12px 0 0;
@@ -39,7 +39,7 @@
 
 .彈窗列 {
   align-items: center;
-  padding: 12px 16px;
+  padding: 10px 16px;
   cursor: pointer;
 }
 
@@ -52,19 +52,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  margin-top: 12px;
-  margin-bottom: 8px;
+  margin-bottom: 3px;
 }
 
-.幣種圖示 {
+.Coin_Icon {
   width: 32px;
   height: 32px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.幣種標籤 {
+.Coin_U {
   font-size: 24px;
   color: #eee;
   font-weight: 500;
@@ -72,35 +70,40 @@
 }
 
 .交易總計 {
-  font-size: 14px;
+  font-size: 15px;
   text-align: center;
   background-color: #252935;
-  padding: 35px;
-  border-radius: 4px;
+  padding: 25px;
+  border-radius: 12px;
   height: 60px;
-  width: 85%;
-  margin-right: 5%;
+  width: 88%;
   display: flex;
-  flex-direction: column; /* 垂直排列 */
+  margin: 0 auto;
+  /* 水平居中 */
+  flex-direction: column;
+  /* 垂直排列 */
   justify-content: center;
-  align-items: center;    /* 水平居中 */
-  gap: 8px;               /* 行距 */
+  align-items: center;
+  /* 水平居中 */
 }
 
 .總計 {
   color: #A1A4B0;
   font-size: 16px;
-  display: block;         /* 一行一個 */
+  padding-top: 0;
+  display: block;
+  /* 一行一個 */
   text-align: center;
 }
+
 .金額 {
   font-weight: 550;
   color: white;
   font-size: 28px;
-  display: block;
   text-align: center;
   padding-left: 12px;
-  white-space: nowrap;   /* 不換行 */
+  white-space: nowrap;
+  /* 不換行 */
 }
 
 .下拉箭頭圖示2 {
@@ -114,22 +117,27 @@
   margin-left: 10px;
   margin-top: -2px;
 }
+
 .狀態等待處理 {
   color: #9DA1AC;
-  margin-left: 3px;
+  margin-left: 8px;
   gap: 6px;
   font-size: 15px;
   position: relative;
 }
+
 .狀態完成 {
   color: #9DA1AC;
   margin-left: 3px;
   gap: 6px;
   font-size: 15px;
   position: relative;
-  padding-left: 14px; /* 給圓點預留空間 */
+  padding-left: 15px;
+  /* 給圓點預留空間 */
 }
+
 .狀態完成::before {
+  margin-right: 10px;
   content: "";
   width: 8px;
   height: 8px;
@@ -137,13 +145,90 @@
   border-radius: 50%;
   display: inline-block;
   position: absolute;
-  left: 0; /* 靠左對齊父元素 */
+  left: 0;
   top: 50%;
   transform: translateY(-50%);
 }
-.說明{
-  color:#3b6ed6; 
-  font-size:15px; 
-  vertical-align:middle; 
+
+.說明 {
+  color: #3b6ed6;
+  font-size: 15px;
+  vertical-align: middle;
   margin-left: 5px;
+}
+
+.Deal_Info {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-bottom: 1px solid #53585D;
+  padding-bottom: 15px;
+  /* 邊框線下移10px */
+}
+
+.Deal_Label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  color: #A1A4B0;
+}
+
+.Deal_Label>span {
+  margin-left: auto;
+  color: #fff;
+  font-weight: 400;
+}
+
+.Deal_Address {
+  display: block;
+  margin-top: 15px;
+}
+
+.copy-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 300px;
+  margin-top: 5px;
+  padding-right: 200px;
+  /* 預留右側空間給按鈕 */
+}
+
+.copy-text {
+  flex-grow: 1;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.copy-btn {
+  position: absolute;
+  right: 0;
+  /* 靠最右邊 */
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+}
+
+.copy-btn svg {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+}
+
+.copy-btn:hover svg {
+  stroke: #4a90e2;
+}
+
+.Deal_Label2 {
+  margin-top: 20px;
+  align-items: center;
+  font-size: 15px;
+  color: #A1A4B0;
 }

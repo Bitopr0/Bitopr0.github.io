@@ -1,5 +1,6 @@
 /* 🌐 全域設定 */
-html, body {
+html,
+body {
   margin: 0;
   height: 900px;
 }
@@ -170,7 +171,7 @@ body {
 }
 
 #紀錄清單 {
-  max-height: 500px;
+  max-height: 800px;
   overflow-y: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -259,12 +260,14 @@ body {
 
 @media (min-width: 1024px) {
   .紀錄列 {
-    gap: 8px; /* 原本是12或16，這裡調小距離 */
+    gap: 8px;
+    /* 原本是12或16，這裡調小距離 */
     align-items: center;
   }
 
   .紀錄文字區塊 {
-    margin-left: 4px; /* 原本是8或16，讓文字靠近圖示 */
+    margin-left: 4px;
+    /* 原本是8或16，讓文字靠近圖示 */
   }
 
   .幣種圖示 {
@@ -274,7 +277,8 @@ body {
   }
 
   .右側資訊 {
-    margin-left: auto; /* 保持靠右，但不擠壓左側 */
+    margin-left: auto;
+    /* 保持靠右，但不擠壓左側 */
   }
 
   .幣種文字,
