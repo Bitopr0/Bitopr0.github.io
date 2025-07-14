@@ -212,6 +212,7 @@
   background: transparent;
   border: none;
   outline: none;
+  left: 0;
   flex-grow: 1;
   padding-right: 10px;
 }
