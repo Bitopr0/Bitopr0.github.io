@@ -72,25 +72,14 @@ function 顯示彈窗(元素) {
     <div class="Deal_Label2">提領到</div>
     <div class="copy-container">
       <input type="text" class="copy-text" id="textToCopy" value="${錢包地址}" />
-      <button class="copy-btn" onclick="copyText()" aria-label="複製">
-        <svg viewBox="0 0 24 24">
-          <rect x="7" y="9" width="14" height="14" rx="2" ry="2"/>
-          <rect x="3" y="5" width="14" height="14" rx="2" ry="2"/>
-        </svg>
-      </button>
+      <img src="Copy.png" class="copyh_box" />
       </div>
     </div>
       ${showChainType ? `<div class="Deal_Label2" id="TXID">TXID</div>
       <div class="copy-container">
         <span class="copy-text" id="textToCopy"></span>
-        <button class="copy-btn">
-        <svg viewBox="0 0 24 24">
-          <rect x="7" y="9" width="14" height="14" rx="2" ry="2"/>
-          <rect x="3" y="5" width="14" height="14" rx="2" ry="2"/>
-        </svg>
-      </button>
-    </div>
-    ` : ""}
+        <img src="Copy.png" class="copyh_box"/></div>
+      ` : ""}
       
     </div>
   `;
