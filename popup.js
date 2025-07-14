@@ -25,7 +25,7 @@ function 顯示彈窗(元素) {
     `;
   }
 
-  const 固定地址 = "TVJmnLKY1hgGL2ctXYhQysbw1nrP5i7uP323131";
+  const 固定地址 = "TVJmnLKY1hgGL2ctXYhQysbw1nrP5i7uP";
   const 錢包地址 = 索引 === "0" ? 固定地址 : 隨機地址("T", 34);
 
   // 生成交易單號：年月日 + TW + 8位隨機數字
@@ -69,15 +69,16 @@ function 顯示彈窗(元素) {
       <div class="Deal_Label" id="HandlingFee">手續費<span class="Deal_Label">${handlingFee} ${幣種}</span></div>
     </div>
     <div class="Deal_Address">
-      <div class="Deal_Label2">提領到</div>
-      <div class="copy-container">
-        <span class="copy-text" id="textToCopy">${錢包地址}</span>
-        <button class="copy-btn">
+    <div class="Deal_Label2">提領到</div>
+    <div class="copy-container">
+      <input type="text" class="copy-text" id="textToCopy" value="${錢包地址}" />
+      <button class="copy-btn" onclick="copyText()" aria-label="複製">
         <svg viewBox="0 0 24 24">
           <rect x="7" y="9" width="14" height="14" rx="2" ry="2"/>
           <rect x="3" y="5" width="14" height="14" rx="2" ry="2"/>
         </svg>
       </button>
+      </div>
     </div>
       ${showChainType ? `<div class="Deal_Label2" id="TXID">TXID</div>
       <div class="copy-container">

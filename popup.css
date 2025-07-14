@@ -186,27 +186,39 @@
   margin-top: 15px;
 }
 
+.Deal_Label2 {
+  margin-top: 20px;
+  align-items: center;
+  font-size: 15px;
+  color: #A1A4B0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600&display=swap');
+
 .copy-container {
   position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-width: 300px;
-  margin-top: 5px;
-  padding-right: 200px;
-  /* 預留右側空間給按鈕 */
+  max-width: 100%;
+  padding-right: 40px;
+  /* 預留空間給按鈕 */
+  margin-top: 10px;
 }
 
 .copy-text {
-  flex-grow: 1;
+  font-family: 'Anuphan', sans-serif;
   font-size: 16px;
   color: #ffffff;
+  background: transparent;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  padding-right: 10px;
 }
 
 .copy-btn {
   position: absolute;
-  right: 0;
-  /* 靠最右邊 */
+  right: 8px;
   top: 50%;
   transform: translateY(-50%);
   background: none;
@@ -224,11 +236,4 @@
 
 .copy-btn:hover svg {
   stroke: #4a90e2;
-}
-
-.Deal_Label2 {
-  margin-top: 20px;
-  align-items: center;
-  font-size: 15px;
-  color: #A1A4B0;
 }
