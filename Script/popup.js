@@ -51,7 +51,7 @@ function 顯示彈窗(元素) {
   const 彈窗明細區 = document.getElementById("彈窗明細");
   彈窗明細區.innerHTML = `
     <div class="彈窗列 幣種顯示區塊">
-      <img src="/res/${幣種}.png" alt="${幣種}" class="Coin_Icon" />
+      <img src="res/${幣種}.png" alt="${幣種}" class="Coin_Icon" />
       <span class="Coin_U">${幣種}</span>
     </div>
     <div class="交易總計">
@@ -72,13 +72,13 @@ function 顯示彈窗(元素) {
     <div class="Deal_Label2">提領到</div>
     <div class="copy-container">
       <input type="text" class="copy-text" id="textToCopy" value="${錢包地址}" />
-      <img src="/res/Copy.png" class="copyh_box" />
+      <img src="res/Copy.png" class="copyh_box" />
       </div>
     </div>
       ${showChainType ? `<div class="Deal_Label2" id="TXID">TXID</div>
       <div class="copy-container">
         <span class="copy-text" id="textToCopy"></span>
-        <img src="/res/Copy.png" class="copyh_box"/></div>
+        <img src="res/Copy.png" class="copyh_box"/></div>
       ` : ""}
       
     </div>
