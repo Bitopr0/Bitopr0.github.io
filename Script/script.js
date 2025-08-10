@@ -58,7 +58,7 @@ function 建立紀錄(幣種, 時間, 金額, 狀態類型, 狀態文字, 索引
          data-time="${時間}"
          data-status="${狀態文字}"
          data-index="${狀態類型 === "處理中" ? 0 : 1}">
-      <img src="${幣種}.png" class="幣種圖示" />
+      <img src="/res/${幣種}.png" class="幣種圖示" />
       <div class="紀錄文字區塊">
         <div class="幣種文字">${幣種}</div>
         <div class="時間文字">${時間}</div>
