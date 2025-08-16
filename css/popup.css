@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600&display=swap');
+
 .遮罩層 {
   position: fixed;
   top: 0;
@@ -192,8 +194,6 @@
   font-size: 15px;
   color: #A1A4B0;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600&display=swap');
 
 .copy-container {
   position: relative;
