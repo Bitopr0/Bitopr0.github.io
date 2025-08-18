@@ -1,13 +1,7 @@
-// 點擊「×」隱藏主內容卡片
-document
-  .querySelector(".歷史表頭 .關閉按鈕")
-  .addEventListener("click", () => {
-    document.querySelector(".內容卡片").style.display = "none";
-  });
-
 // 隨機產生錢包地址
 function 隨機地址(prefix = "T", length = 34) {
-  const 字元集 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  const 字元集 =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   let 結果 = prefix;
   for (let i = 1; i < length; i++) {
     結果 += 字元集.charAt(Math.floor(Math.random() * 字元集.length));
@@ -72,23 +66,28 @@ function 建立紀錄(幣種, 時間, 金額, 狀態類型, 狀態文字, 索引
   紀錄清單容器.appendChild(項目);
 
   // 綁定右側金額點擊事件（修改金額）
-  項目.querySelector('.右側資訊').onclick = function (e) {
+  項目.querySelector(".右側資訊").onclick = function (e) {
     e.stopPropagation();
-    const 金額元素 = this.querySelector('.金額文字');
+    const 金額元素 = this.querySelector(".金額文字");
     // 取得純數字部分（去掉逗號、小數點、單位）
-    let currentAmount = 金額元素.textContent.replace(/,/g, '').replace(/\.\d+/, '').replace(/ [A-Z]+$/, '');
-    let newAmount = prompt('請輸入新金額（不含小數）：', currentAmount);
-    if (newAmount !== null && newAmount.trim() !== '' && !isNaN(newAmount)) {
+    let currentAmount = 金額元素.textContent
+      .replace(/,/g, "")
+      .replace(/\.\d+/, "")
+      .replace(/ [A-Z]+$/, "");
+    let newAmount = prompt("請輸入新金額（不含小數）：", currentAmount);
+    if (newAmount !== null && newAmount.trim() !== "" && !isNaN(newAmount)) {
       // 自動補上隨機小數點（6位）
-      let randomDecimal = Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
+      let randomDecimal = Math.floor(Math.random() * 1000000)
+        .toString()
+        .padStart(6, "0");
       let finalAmount = `${parseInt(newAmount, 10)}.${randomDecimal}`;
       金額元素.textContent = 格式化金額(finalAmount, 幣種);
     }
   };
   // 綁定左側區塊（幣種與時間）點擊事件（彈出明細）
-  項目.querySelector('.紀錄文字區塊').onclick = function (e) {
+  項目.querySelector(".紀錄文字區塊").onclick = function (e) {
     e.stopPropagation();
-    顯示彈窗(項目.querySelector('.紀錄列'));
+    顯示彈窗(項目.querySelector(".紀錄列"));
   };
 }
 
@@ -134,10 +133,11 @@ for (let i = 1; i < 總筆數; i++) {
 }
 
 // 關閉彈窗
-document.getElementById('關閉彈窗').onclick = function () {
-  document.getElementById('遮罩背景').style.display = 'none';
-  document.getElementById('提領彈窗').style.display = 'none';
+document.getElementById("關閉彈窗").onclick = function () {
+  document.getElementById("遮罩背景").style.display = "none";
+  document.getElementById("提領彈窗").style.display = "none";
 };
 
-
-
+document.getElementById("關閉歷史記錄").onclick = function () {
+  location.href = "page/Home.html";
+};
