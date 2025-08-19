@@ -16,6 +16,13 @@ body {
   display: flex;
   align-items: center;
   background-color: #10141f;
+  padding: 0 10px; /* 可調整左右邊距 */
+}
+
+.導航欄工具欄 {
+  margin-left: auto; /* 把 QR 圖示推到最右邊 */
+  width: 30px;
+  height: 30px;
 }
 
 .logo {
