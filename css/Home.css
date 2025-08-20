@@ -20,15 +20,14 @@ body {
 }
 
 .導航欄工具欄 {
-  display:flex;
+  display: flex;
   margin-left: auto; /* 把 QR 圖示推到最右邊 */
   height: 30px;
 }
 
-.導航欄圖標{
- weight:30px;
- height:30px;
-
+.導航欄圖標 {
+  width: 30px;
+  height: 30px;
 }
 
 .logo {
