@@ -39,7 +39,7 @@ body {
   margin: 10px;
   border-radius: 50%;
 }
-.toggle-container {
+.版本切換 {
   display: flex;
   width: 90px;
   height: 30px;
@@ -51,7 +51,7 @@ body {
   user-select: none;
 }
 
-.toggle-option {
+.選項卡 {
   flex: 1;
   text-align: center;
   padding: 8px 0;
@@ -59,7 +59,7 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-.toggle-option.active {
+.選項卡.選中 {
   background-color: #b49777;
   border-radius: 50px;
   color: #000;
