@@ -7,7 +7,7 @@ body {
 }
 body {
   font-family: "Anuphan", sans-serif;
-  font-weight: 350;
+  font-weight: 300;
   background-color: #10141f;
   color: #eee;
 }
@@ -16,7 +16,7 @@ body {
   display: flex;
   align-items: center;
   background-color: #10141f;
-  padding: 0 10px; /* 可調整左右邊距 */
+  padding: 10px;
 }
 
 .導航欄工具欄 {
@@ -24,6 +24,7 @@ body {
   margin-left: auto; /* 把 QR 圖示推到最右邊 */
   height: 30px;
   gap: 15px; /* 調整圖示之間的間距 */
+  padding-right: 10px; /* 調整右側邊距 */
 }
 
 .導航欄圖標 {
@@ -46,7 +47,6 @@ body {
   text-align: middle;
   overflow: hidden;
   background-color: #363a45;
-  font-family: sans-serif;
   cursor: pointer;
   user-select: none;
 }
