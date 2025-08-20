@@ -23,11 +23,13 @@ body {
   display: flex;
   margin-left: auto; /* 把 QR 圖示推到最右邊 */
   height: 30px;
+  gap: 5px; /* 調整圖示之間的間距 */
 }
 
 .導航欄圖標 {
-  width: 30px;
-  height: 30px;
+  padding-top: 10px;
+  width: 20px;
+  height: 20px;
 }
 
 .logo {
