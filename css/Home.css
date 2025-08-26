@@ -30,12 +30,16 @@ body {
 }
 
 .box {
-  width: 30px;
-  height: 30px;
+  position: absolute; /* 加入定位屬性 */
+  top: 100vh; /* 從上方算起的距離，可依實際畫面微調 */
+  left: 65%; /* 從左邊算起的距離，偏右側 */
+  transform: translateX(-50%); /* 讓 box 水平置中於該位置 */
+  width: 10px;
+  height: 10px;
   background-color: #a2d5f2;
-  border-radius: 20px; /* 控制圓角大小 */
+  border-radius: 20px;
   padding: 20px;
   color: #333;
   font-size: 18px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 可選：加點陰影更有質感 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
