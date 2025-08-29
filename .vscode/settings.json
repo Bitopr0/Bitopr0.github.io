@@ -1,5 +1,5 @@
 {
-    "livePreview.defaultPreviewPath": "/index.html",
+    "livePreview.defaultPreviewPath": "/page/Home.html",
     "editor.formatOnSave": true,
     "files.autoSave": "afterDelay"
 }
