@@ -85,7 +85,7 @@ span{
   left: 30px;
   top: 200px;
   font-size: 39px;
-
+  gap: 5px;
 }
 #amount .arrow{
   width: 27px;
