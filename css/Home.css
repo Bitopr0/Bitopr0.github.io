@@ -35,7 +35,7 @@ span {
 
 .box {
   position: absolute; /* 加入定位屬性 */
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   left: 320px;
   top: 100px;
@@ -43,37 +43,37 @@ span {
   height: 30px;
 }
 
-.tab_Version {
+#tab_Version {
   top: 20px; /* 從上方算起的距離，可依實際畫面微調 */
   left: 80px; /* 從左邊算起的距離，偏右側 */
   width: 150px;
   height: 30px;
 }
-.toolbar1 {
+#toolbar1 {
   top: 15px;
   left: 325px;
   width: 30px;
   height: 30px;
 }
-.toolbar2 {
+#toolbar2 {
   top: 15px;
   left: 370px;
   width: 30px;
   height: 30px;
 }
-.toolbar3 {
+#toolbar3 {
   top: 15px;
   left: 413px;
   width: 30px;
   height: 30px;
 }
-.toolbar4 {
+#toolbar4 {
   top: 15px;
   left: 455px;
   width: 30px;
   height: 30px;
 }
-.inbuy1 {
+#inbuy1 {
   left: 50px;
   top: 192px;
   width: 100px;
@@ -90,4 +90,18 @@ span {
 #amount .arrow {
   width: 27px;
   height: 17px;
+}
+#Buy {
+  position: absolute;
+  left: 30px;
+  top: 650px;
+  width: 200px;
+  height: 80px;
+}
+#NTBuy {
+  position: absolute;
+  left: 260px;
+  top: 650px;
+  width: 200px;
+  height: 80px;
 }
