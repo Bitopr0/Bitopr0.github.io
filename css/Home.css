@@ -7,17 +7,17 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-*{
-  font-family: "Anuphan",sans-serif;
+* {
+  font-family: "Anuphan", sans-serif;
   font-size: 12px;
-  color:white;
+  color: white;
 }
 body {
   background-color: #10141f;
   color: #eee;
 }
 
-span{
+span {
   font-weight: bold;
   font-size: 45px;
 }
@@ -37,57 +37,57 @@ span{
   position: absolute; /* 加入定位屬性 */
   background-color: #a2d5f2;
   border-radius: 10px;
-  left:320px;
+  left: 320px;
   top: 100px;
   width: 30px;
   height: 30px;
 }
 
 .tab_Version {
-  top: 10px; /* 從上方算起的距離，可依實際畫面微調 */
+  top: 20px; /* 從上方算起的距離，可依實際畫面微調 */
   left: 80px; /* 從左邊算起的距離，偏右側 */
   width: 150px;
   height: 30px;
 }
-.toolbar1{
-  top:10px;
+.toolbar1 {
+  top: 15px;
   left: 325px;
   width: 30px;
   height: 30px;
 }
-.toolbar2{
-  top:10px;
+.toolbar2 {
+  top: 15px;
   left: 370px;
   width: 30px;
   height: 30px;
 }
-.toolbar3{
-  top:10px;
+.toolbar3 {
+  top: 15px;
   left: 413px;
   width: 30px;
   height: 30px;
 }
-.toolbar4{
-  top:10px;
+.toolbar4 {
+  top: 15px;
   left: 455px;
   width: 30px;
   height: 30px;
 }
-.inbuy1{
+.inbuy1 {
   left: 50px;
-  top: 132px;
+  top: 192px;
   width: 100px;
 }
-#amount{
+#amount {
   position: absolute;
   display: flex;
   align-items: center;
   left: 30px;
-  top: 200px;
+  top: 300px;
   font-size: 39px;
   gap: 5px;
 }
-#amount .arrow{
+#amount .arrow {
   width: 27px;
   height: 17px;
 }
