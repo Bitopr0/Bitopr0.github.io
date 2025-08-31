@@ -12,12 +12,13 @@ window.onload = function () {
 
     // 点击后允许用户修改金额
     amountSpan.style.cursor = "pointer";
-    amountSpan.onclick = function () {
-        const newAmount = prompt("請輸入新的金額：", randomAmount);
-        if (newAmount !== null && !isNaN(newAmount)) {
-            const updatedAmount = parseInt(newAmount).toLocaleString();
-            amountSpan.innerHTML = `${updatedAmount} <img src="/res/Right.png" class="arrow" />`;
-        }
-    };
+    //amountSpan.onclick = ChangeAmount;
 };
 
+function ChangeAmount() {
+    const newAmount = prompt("請輸入新的金額：", randomAmount);
+    if (newAmount !== null && !isNaN(newAmount)) {
+        const updatedAmount = parseInt(newAmount).toLocaleString();
+        amountSpan.innerHTML = `${updatedAmount} <img src="/res/Right.png" class="arrow" />`;
+    }
+};

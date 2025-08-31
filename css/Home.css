@@ -17,11 +17,6 @@ body {
   color: #eee;
 }
 
-span {
-  font-weight: bold;
-  font-size: 45px;
-}
-
 .背景 {
   position: absolute; /* 讓背景定位在容器內 */
   width: 100vw;
@@ -86,6 +81,7 @@ span {
   top: 300px;
   font-size: 39px;
   gap: 5px;
+  font-weight: bold;
 }
 #amount .arrow {
   width: 27px;
