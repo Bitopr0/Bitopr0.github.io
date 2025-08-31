@@ -2,7 +2,7 @@ window.onload = function () {
     const amountSpan = document.getElementById("amount");
 
     // 生成随机金额（例如：100,000 到 9,999,999）
-    const randomAmount = Math.floor(Math.random() * (9999999 - 100000 + 1)) + 100000;
+    const randomAmount = Math.floor(Math.random() * (90000 - 100 + 1)) + 100;
 
     // 格式化为带逗号的金额
     const formattedAmount = randomAmount.toLocaleString();
