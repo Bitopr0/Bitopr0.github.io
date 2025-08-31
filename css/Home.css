@@ -35,7 +35,7 @@ span {
 
 .box {
   position: absolute; /* 加入定位屬性 */
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 10px;
   left: 320px;
   top: 100px;
