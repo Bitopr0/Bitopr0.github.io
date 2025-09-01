@@ -15,6 +15,7 @@ body {
 body {
   background-color: #10141f;
   color: #eee;
+  z-index: -1;
 }
 
 .背景 {
