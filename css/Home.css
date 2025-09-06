@@ -1,12 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600&display=swap");
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  overflow: hidden;
-}
 * {
   font-family: "Anuphan", sans-serif;
   font-size: 12px;
@@ -15,71 +8,61 @@ body {
 body {
   background-color: #10141f;
   color: #eee;
-  z-index: -1;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .背景 {
-  position: absolute; /* 讓背景定位在容器內 */
+  position: flex; /* 讓背景定位在容器內 */
   width: 100vw;
   height: 100%;
   background-image: url("/res/HOME.png");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -1; /* 確保背景在最底層 */
 }
 
 .box {
   position: absolute; /* 加入定位屬性 */
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 1);
   border-radius: 10px;
   left: 320px;
-  top: 100px;
-  width: 30px;
-  height: 30px;
+  top: 20px;
+  width: 25px;
+  height: 25px;
 }
 
 #tab_Version {
   top: 20px; /* 從上方算起的距離，可依實際畫面微調 */
-  left: 80px; /* 從左邊算起的距離，偏右側 */
-  width: 150px;
-  height: 30px;
+  left: 60px; /* 從左邊算起的距離，偏右側 */
+  width: 120px;
 }
 #toolbar1 {
-  top: 15px;
-  left: 325px;
-  width: 30px;
-  height: 30px;
+  left: 270px;
 }
 #toolbar2 {
-  top: 15px;
-  left: 370px;
-  width: 30px;
-  height: 30px;
+  left: 305px;
 }
 #toolbar3 {
-  top: 15px;
-  left: 413px;
-  width: 30px;
-  height: 30px;
+  left: 340px;
 }
 #toolbar4 {
-  top: 15px;
-  left: 455px;
-  width: 30px;
-  height: 30px;
+  left: 375px;
 }
 #inbuy1 {
   left: 50px;
-  top: 192px;
-  width: 100px;
+  top: 210px;
+  width: 80px;
 }
 #amount {
   position: absolute;
   display: flex;
   align-items: center;
   left: 30px;
-  top: 300px;
+  top: 320px;
   font-size: 39px;
   gap: 5px;
   font-weight: bold;

@@ -9,6 +9,7 @@ window.onload = function () {
 
   amountSpan.style.cursor = "pointer";
   amountSpan.addEventListener("click", handleAmountChange);
+  amountSpan.addEventListener("click",)
 };
 
 function updateAmountDisplay(amount) {
