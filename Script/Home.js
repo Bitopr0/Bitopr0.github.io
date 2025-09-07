@@ -6,7 +6,7 @@ window.onload = () => {
   amountSpan = $id("amount");
   currentAmount = getRandomAmount(100, 90000);
 
-  renderAmount(currentAmount);
+  //renderAmount(currentAmount);
 
   amountSpan.style.cursor = "pointer";
   amountSpan.addEventListener("click", promptForAmount);
@@ -22,7 +22,10 @@ function getRandomAmount(min, max) {
 
 function renderAmount(amount) {
   const formatted = amount.toLocaleString();
-  amountSpan.innerHTML = `${formatted} <img src="/res/Right.png" class="arrow" />`;
+  amountSpan.innerHTML = `${formatted} <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+      </svg>`;
 }
 
 function promptForAmount() {

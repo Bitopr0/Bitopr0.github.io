@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
-    <meta name="apple-mobile-web-app-title" content="BitoPro" />
-    <link rel="apple-touch-icon" href="res/BitoPro.png" />
-    <link rel="icon" type="image/x-icon" href="res/BitoPro.png" />
-    <meta charset="UTF-8" />
 
-    <title>提領紀錄</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/Home.css" />
-  </head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="BitoPro" />
+  <link rel="apple-touch-icon" href="res/BitoPro.png" />
+  <link rel="icon" type="image/x-icon" href="res/BitoPro.png" />
+  <meta charset="UTF-8" />
 
-  <body>
-    <div class="背景">
-      <div id="tab_Version" class="box"></div>
-      <div id="toolbar1" class="box"></div>
-      <div id="toolbar2" class="box"></div>
-      <div id="toolbar3" class="box"></div>
-      <div id="toolbar4" class="box"></div>
-      <div id="inbuy1" class="box"></div>
-      <div id="amount">
-  3,532,000 <img src="/res/Right.png" class="arrow" />
+  <title>提領紀錄</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/Home.css" />
+</head>
+
+<body>
+  <div class="背景">
+    <div id="tab_Version" class="box"></div>
+    <div id="toolbar1" class="box"></div>
+    <div id="toolbar2" class="box"></div>
+    <div id="toolbar3" class="box"></div>
+    <div id="toolbar4" class="box"></div>
+    <div id="inbuy1" class="box"></div>
+    <div id="amount">3,532,000
+      <!--img src="/res/Right.png" class="arrow" /-->
+      <svg class="arrow" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+          d="M12.7071 5.29289C12.3166 4.90237 11.6834 4.90237 11.2929 5.29289C10.9024 5.68342 10.9024 6.31658 11.2929 6.70711L15.5858 11H6C5.44772 11 5 11.4477 5 12C5 12.5523 5.44772 13 6 13H15.5858L11.2929 17.2929C10.9024 17.6834 10.9024 18.3166 11.2929 18.7071C11.6834 19.0976 12.3166 19.0976 12.7071 18.7071L18.7071 12.7071C19.0976 12.3166 19.0976 11.6834 18.7071 11.2929L12.7071 5.29289Z">
+        </path>
+      </svg>
+
     </div>
 
-      <div id="Buy" class="box"></div>
-      <div id="NTBuy" class="box"></div>
-      <input id="QRcode" type="file" accept="image/*" capture="environment">
-  <script src="/Script/Home.js"></script>
+    <div id="Buy" class="box"></div>
+    <div id="NTBuy" class="box"></div>
+    <input id="QRcode" type="file" accept="image/*" capture="environment">
+    <script src="/Script/Home.js"></script>
 </body>
+
 </html>
