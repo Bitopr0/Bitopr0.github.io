@@ -2,30 +2,36 @@ let amountSpan;
 let currentAmount;
 const $id = (id) => document.getElementById(id);
 
-window.onload = function () {
+window.onload = () => {
   amountSpan = $id("amount");
+  currentAmount = getRandomAmount(100, 90000);
 
-  currentAmount = Math.floor(Math.random() * (90000 - 100 + 1)) + 100;
-  updateAmountDisplay(currentAmount);
+  renderAmount(currentAmount);
 
   amountSpan.style.cursor = "pointer";
-  amountSpan.addEventListener("click", handleAmountChange);
+  amountSpan.addEventListener("click", promptForAmount);
 
   $id("toolbar1").addEventListener("click", () => {
     $id("QRcode").click();
   });
 };
 
-function updateAmountDisplay(amount) {
+function getRandomAmount(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function renderAmount(amount) {
   const formatted = amount.toLocaleString();
   amountSpan.innerHTML = `${formatted} <img src="/res/Right.png" class="arrow" />`;
 }
 
-function handleAmountChange() {
+function promptForAmount() {
   const input = prompt("請輸入新的金額：", currentAmount);
-  if (input !== null && !isNaN(input)) {
-    currentAmount = parseInt(input, 10);
-    updateAmountDisplay(currentAmount);
+  const parsed = parseInt(input, 10);
+
+  if (input !== null && !isNaN(parsed)) {
+    currentAmount = parsed;
+    renderAmount(currentAmount);
   } else if (input !== null) {
     alert("請輸入有效的數字！");
   }
