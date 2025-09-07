@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600&display=swap");
 
 * {
-  font-family: "Anuphan", sans-serif;
+  font-family: "IBM Plex Sans", "Noto Sans Traditional Chinese", "PingFang TC", "Helvetica Neue", Arial, "sans-serif", 微軟正黑體;
   font-size: 12px;
   color: white;
 }
@@ -106,4 +106,35 @@ body {
   background-repeat: no-repeat;
   transition: background-image 0.5s ease-in-out;
   overflow: hidden;
+}
+#USDTpage {
+  position: absolute; /* 或 relative，視你的布局需求 */
+  left: 54vw;
+  top: 83vh;
+  width: 170px;
+  height: 50px;
+  padding: 0;
+  display: flex; /* ✅ 讓子元素橫向排列 */
+  align-items: center; /* 垂直置中 */
+  gap: 15px; /* 子元素之間的間距 */
+}
+
+#USDTamount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-left: auto;
+}
+
+#USDTZH {
+  width: 80px;
+  height: 35px;
+  border-radius: 6px;
+  background-color: #41b498;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
 }
