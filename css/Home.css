@@ -17,7 +17,7 @@ body {
 
 .背景 {
   position: flex; /* 讓背景定位在容器內 */
-  width: 100vw;
+  width: 100%;
   height: 100%;
   background-image: url("/res/HOME.png");
   background-size: 100% 100%;
@@ -27,7 +27,7 @@ body {
 
 .box {
   position: absolute; /* 加入定位屬性 */
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 01);
   border-radius: 10px;
   left: 320px;
   top: 20px;
@@ -36,21 +36,25 @@ body {
 }
 
 #tab_Version {
-  top: 20px; /* 從上方算起的距離，可依實際畫面微調 */
-  left: 60px; /* 從左邊算起的距離，偏右側 */
-  width: 120px;
+  top: 1.8vh; /* 從上方算起的距離，可依實際畫面微調 */
+  left: 16vw; /* 從左邊算起的距離，偏右側 */
+  width: 65pt;
 }
 #toolbar1 {
-  left: 270px;
+  left: 64.6vw;
+  top: 1.8vh;
 }
 #toolbar2 {
-  left: 305px;
+  top: 1.8vh;
+  left: 73vw;
 }
 #toolbar3 {
-  left: 340px;
+  left: 81vw;
+  top: 1.8vh;
 }
 #toolbar4 {
-  left: 375px;
+  left: 89.5vw;
+  top: 1.8vh;
 }
 #inbuy1 {
   left: 50px;
@@ -61,13 +65,13 @@ body {
   position: absolute;
   display: flex;
   align-items: center;
-  left: 30px;
-  top: 110px;
-  font-size: 39px;
+  left: 6vw;
+  top: 12.5vh;
+  font-size: 25pt;
   font-weight: bold;
 }
 #amount .arrow {
-  padding-top: 5px;
+  padding-top: 5pt;
   width: 30px;
   height: 30px;
   color: #b19879;
@@ -78,15 +82,15 @@ body {
 }
 #Buy {
   position: absolute;
-  left: 30px;
-  top: 470px;
+  left: 7vw;
+  top: 53vh;
   width: 150px;
   height: 80px;
 }
 #NTBuy {
   position: absolute;
-  left: 220px;
-  top: 470px;
+  left: 53vw;
+  top: 53vh;
   width: 150px;
   height: 80px;
 }
@@ -96,10 +100,10 @@ body {
 
 #Adspage {
   position: absolute;
-  left: 23px;
-  top: 290px;
-  width: 89vw;
-  height: 153px;
+  left:5.5vw;
+  top: 30vh;
+  width: 89.5vw;
+  height: 120pt;
   border-radius: 15px;
   background-color: white;
   background-size: 100% 100%;
