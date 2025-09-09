@@ -37,7 +37,13 @@ body {
   width: 25px;
   height: 25px;
 }
-
+#Profile {
+  top: 1.4vh; /* 從上方算起的距離，可依實際畫面微調 */
+  left: 5.5vw; /* 從左邊算起的距離，偏右側 */
+  width: 25pt;
+  height: 25pt;
+  border-radius: 50%;
+}
 #tab_Version {
   top: 1.8vh; /* 從上方算起的距離，可依實際畫面微調 */
   left: 16vw; /* 從左邊算起的距離，偏右側 */
@@ -153,4 +159,19 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 14px;
+}
+#navibar {
+  position: absolute;
+  left: 0;
+  top: 90vh;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  padding: 15px 10px;
+  gap: 5vw;
+}
+#navibar div {
+  position: static;
+  width: 15vw;
+  height: 5vh;
 }

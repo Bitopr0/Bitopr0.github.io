@@ -18,7 +18,24 @@ window.onload = () => {
   setInterval(showNextImage, 3000); // 每3秒切換
   fetchUSDTData(); // 初始取得資料
   setInterval(fetchUSDTData, 6000); // 每6秒更新一次資料
+  initOnclick();
 };
+
+function initOnclick() {
+  $id("Market").addEventListener("click", () => {
+    location.href = "../page/Market.html";
+  });
+  $id("Filled").addEventListener("click", () => {
+    location.href = "../page/Filled.html";
+  });
+  $id("Assets").addEventListener("click", () => {
+    location.href = "../page/Assets.html";
+  });
+  $id("Account").addEventListener("click", () => {
+    location.href = "../page/Account.html";
+  });
+}
+
 const images = [
   "https://cdn.bitopro.com/mini_banner/36/banner_img_tw.webp",
   "https://cdn.bitopro.com/mini_banner/50/banner_img_tw.webp",
@@ -75,9 +92,9 @@ async function fetchUSDTData() {
     if (isNaN(lastPrice) || isNaN(priceChange) || isNaN(usdToTwdRate) || isNaN(usdtPriceInUsd)) {
       return;
     }
-    if(priceChange > 0){
+    if (priceChange > 0) {
       document.getElementById('USDT_Change').style.backgroundColor = '#41b498';
-    }else{
+    } else {
       document.getElementById('USDT_Change').style.backgroundColor = '#f6465d';
     }
     document.getElementById('TWD').textContent = lastPrice.toFixed(2);
