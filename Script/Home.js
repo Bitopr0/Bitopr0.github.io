@@ -16,6 +16,8 @@ window.onload = () => {
   });
   showNextImage(); // 初始顯示
   setInterval(showNextImage, 3000); // 每3秒切換
+  fetchUSDTData(); // 初始取得資料
+  setInterval(fetchUSDTData, 6000); // 每6秒更新一次資料
 };
 const images = [
   "https://cdn.bitopro.com/mini_banner/36/banner_img_tw.webp",
@@ -56,3 +58,33 @@ function promptForAmount() {
     alert("請輸入有效的數字！");
   }
 }
+
+async function fetchUSDTData() {
+  try {
+    const bitoproResponse = await fetch('https://api.bitopro.com/v3/tickers/USDT_TWD');
+    const bitoproData = await bitoproResponse.json();
+
+    const usdResponse = await fetch('https://open.er-api.com/v6/latest/USD');
+    const usdData = await usdResponse.json();
+
+    const lastPrice = parseFloat(bitoproData.data.lastPrice);
+    const priceChange = parseFloat(bitoproData.data.priceChange24hr);
+    const usdToTwdRate = parseFloat(usdData.rates.TWD);
+    const usdtPriceInUsd = lastPrice / usdToTwdRate;
+
+    if (isNaN(lastPrice) || isNaN(priceChange) || isNaN(usdToTwdRate) || isNaN(usdtPriceInUsd)) {
+      return;
+    }
+    if(priceChange > 0){
+      document.getElementById('USDT_Change').style.backgroundColor = '#41b498';
+    }else{
+      document.getElementById('USDT_Change').style.backgroundColor = '#f6465d';
+    }
+    document.getElementById('TWD').textContent = lastPrice.toFixed(2);
+    document.getElementById('USDT').textContent = usdtPriceInUsd.toFixed(5) + ' USD';
+    document.getElementById('USDT_Change').textContent = priceChange.toFixed(2) + ' %';
+  } catch (error) {
+    console.error('資料取得失敗：', error);
+  }
+}
+
